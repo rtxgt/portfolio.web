@@ -1,0 +1,14 @@
+/* Define the keyframes for the fade effect */
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Create a class to apply the animation */
+.fade-in-image {
+  animation: fadeInAnimation ease 2s forwards;
+}

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Omar Helmy | Portfolio</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-hover: #0284c7;
+      --border: #334155;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    /* GLOBAL FADE IN ANIMATION */
+    .fade-in {
+      opacity: 0;
+      animation: fadeInAnimation ease 2s forwards;
+    }
+
+    @keyframes fadeInAnimation {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: var(--text);
+      letter-spacing: -0.025em;
+    }
+
+    header p {
+      color: var(--accent);
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      font-weight: 500;
+    }
+
+    .bio {
+      margin-top: 1rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background-color: var(--accent);
+      color: #0f172a;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--accent-hover);
+      color: #ffffff;
+    }
+
+    .btn-outline {
+      border: 1px solid var(--border);
+      color: var(--text);
+      background-color: var(--card-bg);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    section {
+      margin-top: 3rem;
+    }
+
+    section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+      padding-bottom: 0.2rem;
+    }
+
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .tag {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 640px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent);
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .card-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .card-links a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .card-links a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container fade-in">
+    <header>
+      <img src="w212-01.png" width="180" alt="Omar Helmy Logo">
+      <h1>Omar Helmy</h1>
+      <p>Web Developer / Professional video editor / Game Developer</p>
+      <p class="bio">
+        Passionate about building clean projects, creative work, and high-performance applications.
+      </p>
+      
+      <div class="links">
+        <a href="https://drive.google.com/file/d/1FkMFPJ9-dBh1YizOAr5qAvYn0ZPwmFPs/view?usp=sharing" class="btn btn-primary" target="_blank">View Resume </a>
+        <a href="https://www.youtube.com/@omarhelmy-0" class="btn btn-outline" target="_blank">my channel</a>
+        <a href="https://www.upwork.com/freelancers/~017b841b2044f00703" class="btn btn-outline" target="_blank">Upwork</a>
+        <a href="https://www.instagram.com/omrhelmyelngar/" class="btn btn-outline">DM me !</a>
+      </div>
+    </header>
+
+    <section>
+      <h2>Skills & Expertise</h2>
+      <div class="skills-grid">
+        <span class="tag">talented video editor</span>
+        <span class="tag">Web Developer</span>
+        <span class="tag">JavaScript / HTML / CSS</span>
+        <span class="tag">Game Developer</span>
+        <span class="tag">Git & Version Control</span>
+        <span class="tag">Performance Tuning</span>
+        <span class="tag">creative</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Featured Projects & Work</h2>
+      <div class="grid">
+        
+        <div class="card">
+          <div>
+            <h3>develop network</h3>
+            <p>markting reel for instgram page.</p>
+          </div>
+          <div class="card-links">
+            <a href="https://drive.google.com/file/d/1eQdnyubgHjJ3J0qW77RgUjJQP_Lfu6hq/view?usp=drivesdk" target="_blank">view video</a>
+            <a href="https://www.instagram.com/develop.network/?hl=en">Live Demo</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <h3>twin turbo cars</h3>
+            <p> A famous documantery and car mechanics youtube channel 
+              worked hard on every video to be like the famous car channels and now it has 280k+ sub
+              I was the main video editor and supervisor of all editors and edits . (since: 2023-2025).</p>
+          </div>
+          <div class="card-links">
+            <a href="https://www.youtube.com/@twinpower99" target="_blank">channel link</a>
+            <a href="https://drive.google.com/file/d/1zfM3Nd1utaNhyl3chdixaFzlRlIUUvc_/view?usp=drive_link" target="_blank">Live Demo 1</a>
+            <a href="https://drive.google.com/file/d/1qdJTp1oz9x2n8vctiC3D0lXeV-YhBa7O/view?usp=drive_link" target="_blank">Live Demo 2</a>
+            <a href="https://drive.google.com/file/d/1n8pcX8iyacbV7N6qSadwAkZNXxN7-uou/view?usp=drive_link" target="_blank">Live Demo 3</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <h3>zackquack</h3>
+            <p>famous gaming streamer that i worked hard on his streaming clips to go viral on social media.
+              (Was a freelance by clip projects)
+            </p>
+          </div>
+          <div class="card-links">
+            <a href="https://drive.google.com/file/d/14YsE1p7bypyP1nQF1_Ahy8agz3nOO4H4/view?usp=drive_link" target="_blank">view video 1</a>
+            <a href="https://drive.google.com/file/d/1UZ1VYMskuSh0J1qox2_bgxsPUEYmM16V/view?usp=drive_link" target="_blank">view video 2</a>
+            <a href="https://drive.google.com/file/d/1cifvLeXtxfS0nD5XrJTSP12poEz9imNK/view?usp=drive_link" target="_blank">view video 3</a>
+            <a href="https://drive.google.com/file/d/1Br3RufoF7Cu9D5IvVXr0F-HZpEQp7fdI/view?usp=drive_link" target="_blank">view video 4</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <h3>influncer reel</h3>
+            <p>reel for instgram influncer.</p>
+          </div>
+          <div class="card-links">
+            <a href="https://drive.google.com/file/d/1vxi5ZAKfh-uBYdCt9gEZDlCUqOqV9vsD/view?usp=sharing" target="_blank">view video</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <h3>random gaming stream clips</h3>
+            <p>A fortnite gaming clips with diffrent clients that i worked hard on these streaming clips to go viral on social media.
+              (Was a freelance by clip projects).</p>
+          </div>
+          <div class="card-links">
+            <a href="https://drive.google.com/file/d/1Jm4XvZKw069_aqNeQv9ZcqXuKnxVix0F/view?usp=drive_link" target="_blank">view video 1</a>
+            <a href="https://drive.google.com/file/d/17D4RMhgv36Ow-HBfrgd_uG8dAPmMREO0/view?usp=drive_link" target="_blank">view video 2</a>
+            <a href="https://drive.google.com/file/d/1NwQAFMs62sjJp5Gxwr7z_TbUykUr_yh5/view?usp=sharing" target="_blank">view video 3</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <h3>australian barber shop </h3>
+            <p>a markting reels for australian barber shop .</p>
+          </div>
+          <div class="card-links">
+            <a href="https://drive.google.com/file/d/1u-Ai5iiqJUr97LYFGV6kGp0zz8BA7D3A/view?usp=drive_link" target="_blank">View video</a>
+            <a href="https://drive.google.com/file/d/10lMzZoEyoTxB_CEmNVP7hOaP92FLh58f/view?usp=drive_link" target="_blank">Live Demo</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <h3>2d ghost chase game</h3>
+            <p>this is a 2d unity game i made it alone i took about 10 days
+it's very simble and i'm modifying it weekly to put more details and options like : i'm now trying to put a score in this game to be more competition game
+Skills and deliverables :
+
+(2D Design)
+(Game Development)
+(Game Design)
+(2D Game Art)
+(2D Animation).</p>
+          </div>
+          <div class="card-links">
+            <a href="https://www.upwork.com/freelancers/~017b841b2044f00703?p=1695241696377450496" target="_blank">game view link</a>
+            <a href="https://github.com/rtxgt/ghost-chease" target="_blank">Game Demo files</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <h3>simple web puzzle game</h3>
+            <p>game made by html , css ,javascript :
+              i made this game as a project to improve the we can make games with javascript and html even that is not a game develop code
+Skills and deliverables : 
+(2D Design & Drawings)
+(Animated GIF)
+(JavaScript)
+(HTML5)
+(Game Development)
+
+
+.</p>
+          </div>
+          <div class="card-links">
+            <a href="https://www.upwork.com/freelancers/~017b841b2044f00703?p=1810588690206683136" target="_blank">game view link</a>
+            <a href="https://github.com/rtxgt/2d-web-puzzle-game" target="_blank">Game Demo files</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <h3>car crash game</h3>
+            <p> A 2d arcade game with simple controls to avoid crashing other cars with simble tools and pixel art style .</p>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/rtxgt/2d-car-crash" target="_blank">Code Repository</a>
+            
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <h3>3d racing car game</h3>
+            <p>3d mobile car racing game a demo had built for beter game tech and performance and enhance the game optimization skills.</p>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/rtxgt/3d-car-game-demo" target="_blank">Code Repository</a>
+            
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 Omar Helmy. Built with standard HTML/CSS.</p>
+    </footer>
+  </div>
+
+</body>
+</html>
